@@ -344,9 +344,6 @@ func CountsWithContext(ctx context.Context, logical bool) (int, error) {
 			currentInfo[fields[0]] = val
 		}
 	}
-	ret := 0
-	for _, v := range mapping {
-		ret += v
-	}
-	return ret, nil
+	
+	return len(mapping), nil
 }
